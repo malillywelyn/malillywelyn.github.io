@@ -23,3 +23,9 @@ $("nav a").on("click", function (event) {
     })
     
   })
+
+  $(function() {
+    $('.main-title').animate({ 
+        left: "+=100vw",
+    }, 900 );
+});
