@@ -1,6 +1,6 @@
 body {
-  height: 100hv;
-  background: #EDEEE9;
+  height: 100vh;
+  background: rgb(177, 121, 121);
   margin: 0;
   overflow: hidden;
 }
@@ -47,14 +47,20 @@ body {
   left: -100vw;
 }
 
+@media screen and (max-width: 33em){
+.main-title{
+font-size: 25px;
+}
+}
+
 nav{
-  position: relative;
-  display: block;
-  width: 100vw;
-  top: 8vh;
-  text-align: center;
-  font-family: "Georgia";
-  color: #EDEEE9;
+position: relative;
+display: block;
+width: 100vw;
+top: 8vh;
+text-align: center;
+font-family: "Georgia";
+color: #EDEEE9;
 }
 
 nav a{
@@ -72,8 +78,79 @@ z-index: 3;
 .main-img img{
 position: absolute;
 top: 0vh;
-left: 70vw;
+left: 170vw;
 height: 100vh;
-filter: grayscale(100%);
-opacity: 1;
+filter: grayscale(85%) brightness(125%) contrast(225%);
+opacity: 0.8;
+}
+
+@media screen and (max-width: 33em){
+.main-img img{
+left: 170vw;
+top: 0vw;
+height: 150vw;
+z-index: -1;
+}
+}
+
+/* Music Player */
+
+.music-player{
+position: absolute;
+top: 80vh;
+left: 38vw;
+}
+
+@media screen and (max-width: 33em){
+.music-player{
+position: absolute;
+top: 80vh;
+left: 0vw;
+}
+}
+
+.music-player0,
+.music-player1,
+.music-player2,
+.music-player3,
+.music-player4{
+position: relative;
+left: 25vw;
+width: 20em;
+font-size: .8em;
+text-align: center;
+top: 14vh;
+}
+
+/* Music Text */
+
+.music-text{
+font-family: 'Georgia';
+font-size: 1em;
+padding-bottom: .5em;
+color: #ffffff;
+}
+
+footer{
+position: absolute;
+height: 10vh;
+background-color: #282828;
+width: 150vw;
+top: 105vh;
+}
+
+@media screen and (min-width: 55em){
+footer {
+position: absolute;
+height: 10vh;
+background-color: #282828;
+width: 150vw;
+top: 120vh;
+}
+}
+
+@media screen and (max-width: 33em){
+footer {
+top: 180vh;
+}
 }
