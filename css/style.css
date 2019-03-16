@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background: rgb(177, 121, 121);
+  background: #b74949;
   margin: 0;
   overflow: hidden;
 }
@@ -48,8 +48,14 @@ body {
 }
 
 @media screen and (max-width: 33em){
+body{
+overflow: hidden;
+}
 .main-title{
 font-size: 25px;
+left: -100vw;
+width: 80vw;
+top: 0vh;
 }
 }
 
@@ -61,6 +67,7 @@ top: 8vh;
 text-align: center;
 font-family: "Georgia";
 color: #EDEEE9;
+background-color: transparent;
 }
 
 nav a{
@@ -73,6 +80,38 @@ padding-right: .5em;
 z-index: 3;
 }
 
+@media screen and (max-width: 33em){
+nav{
+width: 100vw;
+position: relative;
+background: #b74949d9;
+height: 100vh;
+z-index: 5;
+top: -120vh;
+padding-top: 5vh;
+}
+nav a{
+position: relative;
+display: block;
+padding: 2em;
+}
+.line1{
+position: absolute;
+content: "";
+border: 3px solid #EDEEE9;
+background-color: #b74949;
+height: 1em;
+width: 1em;
+padding: .5em;
+z-index: 8;
+top: 5vh;
+left: 80vw;
+box-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
+}
+
+}
+
+
 /* Main Image */
 
 .main-img img{
@@ -82,14 +121,16 @@ left: 170vw;
 height: 100vh;
 filter: grayscale(85%) brightness(125%) contrast(225%);
 opacity: 0.8;
+z-index: -1;
 }
 
 @media screen and (max-width: 33em){
 .main-img img{
-left: 170vw;
-top: 0vw;
-height: 150vw;
+left: 140vw;
+top: 65vw;
+height: 80vw;
 z-index: -1;
+border-radius: 50% 50%;
 }
 }
 
@@ -104,7 +145,6 @@ left: 38vw;
 @media screen and (max-width: 33em){
 .music-player{
 position: absolute;
-top: 80vh;
 left: 0vw;
 }
 }
@@ -154,4 +194,5 @@ footer {
 top: 180vh;
 }
 }
+
 
