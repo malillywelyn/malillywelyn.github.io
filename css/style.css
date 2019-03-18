@@ -249,6 +249,15 @@ font-size: 1em;
 font-family: 'Futura';
 line-height: 1.5em;
 }
+.footer-c{
+position: absolute;
+text-align: center;
+left: 46vw;
+width: 50vw;
+transform: translate(-50%);
+font-size: .8;
+
+} 
 }
 
 @media screen and (max-width: 33em){
@@ -261,7 +270,6 @@ color: #f8e4d5;
 position: absolute;
 left: 5vw;
 font-size: .8em;
-
 }
 }
 
