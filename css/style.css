@@ -2,6 +2,7 @@ html,
 body{
 overflow-x: hidden;
 overflow-y: none;
+scroll-behavior:smooth;
 }
 
 body {
@@ -51,7 +52,7 @@ body {
   animation-iteration-count: infinite;
   position: absolute;
   left: -100vw;
-  z-index: 2;
+  z-index: -1;
   text-decoration: 4px solid #282828;
 }
 
@@ -112,7 +113,7 @@ nav a{
 position: relative;
 color: #EDEEE9;
 text-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
-font-size: 1.2em;
+font-size: 1.25em;
 padding-left: .5em;
 padding-right: .5em;
 z-index: 3;
@@ -188,6 +189,7 @@ display: none;
 position: absolute;
 top: 80vh;
 left: 38vw;
+z-index: 18;
 }
 
 @media screen and (max-width: 33em){
@@ -224,7 +226,7 @@ position: absolute;
 height: 50vh;
 background-color: #282828;
 width: 150vw;
-top: 100vh;
+top: 200vh;
 }
 
 @media screen and (min-width: 55em){
@@ -233,13 +235,13 @@ position: absolute;
 height: 50vh;
 background-color: #282828;
 width: 150vw;
-top: 100vh;
+top: 215vh;
 }
 }
 
 @media screen and (max-width: 33em){
 footer {
-top: 100vh;
+top: 200vh;
 }
 }
 
@@ -403,4 +405,81 @@ font-size: 1.2em;
 padding-left: .1em;
 padding-right: .1em;
 -webkit-text-stroke: .5px #313134;
+}
+
+
+/* Post titles */
+.post1{
+position: relative;
+top: 85vh;
+display: block;
+left: 3em;
+font-family: 'Georgia';
+font-size: 1.2em;
+color: #282828;
+text-decoration: none;
+padding-bottom: 15vh;
+}
+
+.post-1-section{
+position: relative;
+top: 100vh;
+display: block;
+height: 100vh;
+width: 100vw;
+left: 3em;
+font-family: 'Georgia';
+font-size: 1.2em;
+color: #282828;
+text-decoration: none;
+margin-top: -15vh; 
+}
+
+.post-1-title{
+position: absolute;
+font-size: 1.2em;
+color: #252526;
+text-decoration: none;
+font-family: 'Georgia';
+cursor: pointer;
+color: #EDEEE9;
+text-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
+font-size: 1.2em;
+}
+
+/* Buy on Amazon Link */
+
+.buy-link{
+position: absolute;
+display: block;
+font-family: 'Georgia';
+font-size: 1.2em;
+top: 90vh;
+left: 5vw;
+}
+
+.buy-link a{
+color: #282828;
+text-decoration: none;
+}
+
+.buy-link a:hover,
+.buy-link a:focus{
+color: #ffffff;
+transition: .5s;
+}
+
+.fa-amazon{
+position: absolute;
+font-size: 1.8em;
+font-family: 'Georgia';
+color: #282828;
+}
+
+
+.fa-amazon:hover,
+.fa-amazon:focus{
+position: absolute;
+font-size: 1.8em;
+color: #ffffff;
 }
