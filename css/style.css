@@ -245,7 +245,7 @@ top: 10vh;
 color: #ede4c9;
 position: absolute;
 left: 5vw;
-font-size: 1em;
+font-size: .8em;
 font-family: 'Futura';
 line-height: 1.5em;
 }
@@ -255,7 +255,7 @@ text-align: center;
 left: 46vw;
 width: 50vw;
 transform: translate(-50%);
-font-size: .8;
+font-size: .6;
 
 } 
 }
@@ -275,9 +275,9 @@ font-size: .8em;
 
 .villagers{
 position: relative;
-width: 5em; 
+width: 4em; 
 vertical-align: middle;
-padding-bottom: .75em;
+padding-bottom: .5em;
 }
 
 /* Video Gallery */
