@@ -55,6 +55,7 @@ overflow-y: none;
 \*---------------------------------------*/
 
 .main-title {
+top: -2vh;
 padding: 40px;
 overflow: hidden;
 margin: 0px auto;
@@ -149,20 +150,21 @@ width: 100vw;
 top: 5vh;
 text-align: center;
 font-family: "Georgia";
-color: #EDEEE9;
+color: #252526;
 background-color: transparent;
+opacity: 0;
 }
 
 nav a{
 position: relative;
-color: #EDEEE9;
-text-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
-font-size: 1.25em;
-padding-left: .5em;
-padding-right: .5em;
+color: #252526;
+font-size: 1em;
+padding-left: .75em;
+padding-right: .75em;
 font-weight: 500;
 z-index: 3;
 -webkit-text-stroke: .4px #313134;
+text-transform: uppercase;
 }
 
 /* Menu For Mobiles */
@@ -450,7 +452,7 @@ position: absolute;
 height: 50vh;
 background-color: #282828;
 width: 150vw;
-top: 300vh;
+top: 250vh;
 }
 
 @media screen and (min-width: 55em){
@@ -504,7 +506,7 @@ text-align: center;
 /* Post titles */
 .post1{
 position: absolute;
-top: 85vh;
+top: 90vh;
 display: block;
 left: 3em;
 font-family: 'Georgia';
@@ -522,16 +524,17 @@ top: 65vh;
 
 .post-1-section{
 position: relative;
-top: 100vh;
+top: 115vh;
 display: block;
 height: 100vh;
 width: 100vw;
-left: 3em;
+left: 0em;
 font-family: 'Georgia';
 font-size: 1.2em;
 color: #282828;
 text-decoration: none;
 margin-top: -15vh; 
+background: #232323;
 }
 
 @media screen and (max-width: 33em){
@@ -548,11 +551,27 @@ text-decoration: none;
 font-family: 'Georgia';
 cursor: pointer;
 color: #EDEEE9;
+left: 3em;
 font-weight: 500;
 text-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
 -webkit-text-stroke: .4px #313134;
 top: 2em;
 }
+
+.post-1-section{
+  position: relative;
+  top: 110vh;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  left: 0em;
+  font-family: 'Georgia';
+  font-size: 1.2em;
+  color: #282828;
+  text-decoration: none;
+  margin-top: 5vh; 
+  background: #232323;
+  }
 
 /* Buy on Amazon Link */
 

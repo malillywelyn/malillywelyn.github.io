@@ -34,5 +34,8 @@ $("nav a").on("click", function (event) {
     $('.main-img img').animate({ 
       left: "-=100vw",
   }, 1200 );
+  $('nav').animate({
+    opacity: 1,
+  }, 2000);
 });
 
