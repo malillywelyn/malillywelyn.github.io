@@ -28,7 +28,7 @@ scroll-behavior:smooth;
 
 body {
 height: 100vh;
-background: #EDEEE9;
+background: #222;
 margin: 0;
 }
 
@@ -57,7 +57,24 @@ main {
 /*---------------------------------------*\ 
 *-----------------#Headers----------------* 
 \*---------------------------------------*/
-
+.color-line{
+  position: absolute;
+  top: 94vh;
+  width: 50vw;
+  z-index: 3;
+  left: 10vw;
+  filter: grayscale(100);
+}
+@media screen and (max-width: 33em){
+.color-line{
+  position: absolute;
+  top: 90vh;
+  width: 80vw;
+  z-index: 3;
+  left: 10vw;
+  filter: grayscale(100);
+}
+}
 .main-title {
 top: -2vh;
 padding: 40px;
@@ -147,47 +164,58 @@ top: 6.5em;
 *-----------------#Menus------------------* 
 \*---------------------------------------*/
 
+/* TODO Sort out mobile / desktop css */
+
 nav{
 position: relative;
 display: block;
 width: 100vw;
 top: 5vh;
 text-align: center;
-font-family: "Georgia";
-color: #252526;
-background-color: transparent;
+font-family: "Helvetica Neue,Arial,sans-serif";
+color: #f1e1ca;
+/* background-color: transparent; */
+/* background-image: url('https://static1.squarespace.com/static/5b0ddaf589c172b2261c51c6/t/5ba0ef0d88251bde8874170e/1528286798021/line-trans.png'); */
 opacity: 0;
+padding-bottom: .25rem;
+filter: grayscale(100);
 }
 
 nav a{
 position: relative;
-color: #252526;
-font-size: 1em;
+color: #f1e1ca;
+font-size: 1.5em;
 padding-left: .75em;
 padding-right: .75em;
 font-weight: 500;
-z-index: 3;
--webkit-text-stroke: .4px #313134;
+z-index: 8;
+font-family: "Helvetica Neue, sans-serif";
 text-transform: uppercase;
 }
 
+nav a:hover{
+  text-decoration: double underline;
+  list-style: dotted;
+  transition: .5s;
+}
+
 /* Menu For Mobiles */
-@media screen and (max-width: 33em){
+
 
 nav{
-width: 100vw;
-position: relative;
-background: #EDEEE9;
 height: 100vh;
 z-index: 5;
 top: -120vh;
 padding-top: 5vh;
+/* background-image: url('https://static1.squarespace.com/static/5b0ddaf589c172b2261c51c6/t/5ba0ef0d88251bde8874170e/1528286798021/line-trans.png'); */
+background-color: #EDEEE9;
 }
 
 nav a{
 position: relative;
 display: block;
 padding: 2em;
+color: #222;
 }
 
 /* Click Button - Mobile */
@@ -204,7 +232,10 @@ top: 5vh;
 left: 80vw;
 box-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
 }
+.line1:hover{
+  cursor: pointer;
 }
+
 
 /*---------------------------------------*\ 
 *----------------#Images------------------* 
@@ -212,17 +243,6 @@ box-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #25252
 
 /* Main Image */
 /* Sort out responsive design for the page */
-.mflower{
-position: absolute;
-top: 10vh;
-left: 25vw;
-height: 40vh;
-opacity: .9;
-z-index: -1;
-filter: grayscale(80%) contrast(85%);
-font-family: 'Georgia';
-color: #282828;
-}
 
 .main-img img{
 position: absolute;
@@ -274,7 +294,13 @@ transform: translate(-50%);
 font-family: 'Georgia';
 font-size: 1em;
 padding-bottom: .5em;
-color: #ffffff;
+color: #353535;
+}
+
+.music-player{
+  position: absolute;
+  bottom: 5em;
+  left: 0em;
 }
 
 /*---------------------------------------*\ 
@@ -465,19 +491,33 @@ color: #ffffff;
 
 footer{
 position: absolute;
-height: 50vh;
-background-color: #282828;
-width: 150vw;
+height: 25vh;
+background-color: #222;
+width: 100vw;
 top: 100vh;
+font-family: 'Futura';
+color: #f1e1ca;
+text-align: center;
 }
+
+.footer-text{
+  top: 8vh;
+  color: #f8e4d5;
+  position: absolute;
+  left: 5vw;
+  font-size: .8em;
+  font-family: 'Futura';
+  width: 90vw;
+  text-align: center;
+  }
 
 
 @media screen and (min-width: 55em){
 footer {
 position: absolute;
 height: 30vh;
-background-color: #282828;
-width: 150vw;
+background-color: #222;
+width: 100vw;
 top: 100vh;
 }
 
@@ -485,8 +525,8 @@ top: 100vh;
 top: 10vh;
 color: #ede4c9;
 position: absolute;
-left: 5vw;
-font-size: .8em;
+left: 3.5vw;
+font-size: 1em;
 font-family: 'Futura';
 line-height: 1.5em;
 }
@@ -497,6 +537,7 @@ text-align: center;
 left: 46vw;
 width: 50vw;
 transform: translate(-50%);
+font-family: 'Futura';
 font-size: .6;
 } 
 }
@@ -504,10 +545,10 @@ font-size: .6;
 /* For Mobiles */
 @media screen and (max-width: 33em){
 footer {
-top: 300vh;
+top: 100vh;
 }
 .footer-text{
-top: 10vh;
+top: 8vh;
 color: #f8e4d5;
 position: absolute;
 left: 5vw;
@@ -517,78 +558,6 @@ width: 90vw;
 text-align: center;
 }
 }
-
-
-
-/* Post titles */
-.post1{
-position: absolute;
-top: 90vh;
-display: block;
-left: 3em;
-font-family: 'Georgia';
-font-size: 1.2em;
-color: #282828;
-text-decoration: none;
-padding-bottom: 15vh;
-}
-
-@media screen and (max-width: 33em){
-.post1{
-top: 65vh;
-}
-}
-
-.post-1-section{
-position: relative;
-top: 115vh;
-display: block;
-height: 100vh;
-width: 100vw;
-left: 0em;
-font-family: 'Georgia';
-font-size: 1.2em;
-color: #282828;
-text-decoration: none;
-margin-top: -15vh; 
-background: #232323;
-}
-
-@media screen and (max-width: 33em){
-.post-1-section{
-top: 100vh;
-}
-}
-
-.post-1-title{
-position: absolute;
-font-size: 1.3em;
-color: #252526;
-text-decoration: none;
-font-family: 'Georgia';
-cursor: pointer;
-color: #EDEEE9;
-left: 3em;
-font-weight: 500;
-text-shadow: 0px 0px #252526, -1px 1px #252526, -2px 2px #252526, -3px 3px #252526, -4px 4px #252526, -5px 5px #252526, -6px 6px #252526, -7px 7px #252526, -8px 8px #252526, -9px 9px #252526, -10px 10px #252526, -11px 11px #252526, -12px 12px #252526, -13px 13px #252526, -14px 14px #252526;
--webkit-text-stroke: .4px #313134;
-top: 2em;
-}
-
-.post-1-section{
-  position: relative;
-  top: 110vh;
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  left: 0em;
-  font-family: 'Georgia';
-  font-size: 1.2em;
-  color: #282828;
-  text-decoration: none;
-  margin-top: 5vh; 
-  background: #232323;
-  }
 
 /* Buy on Amazon Link */
 
